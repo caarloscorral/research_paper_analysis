@@ -1,3 +1,4 @@
+
 # Research Paper Analysis
 
 This project facilitates the extraction and analysis of structured data from scientific research paper PDFs using language models like OpenAI via LangChain, storing the extracted data in a BigQuery table.
@@ -18,6 +19,11 @@ research_paper_analysis/
 │   └── main.py
 │
 ├── tests/
+│   ├── test_create_env.py
+│   ├── test_data_storer.py
+│   ├── test_document_ingestor.py
+│   ├── test_information_extractor.py
+│   └── test_text_processing_flow.py
 │
 ├── config.ini
 └── requirements.txt
@@ -115,13 +121,27 @@ TABLE_ID = your_table_id
 ## Usage
 
 1. **Load environment configurations**: They are automatically loaded when running `main.py`.
-  
+
 2. **Run the processing flow**:
    ```bash
    python src/main.py
    ```
 
    This command will process PDFs, extract and analyze data using OpenAI, and store the data in BigQuery.
+
+## Testing
+
+This project uses the `unittest` framework for testing. The tests are organized in the `tests/` directory and cover the functionality of the core modules, including:
+- `test_create_env.py`: Tests the configuration loading process.
+- `test_data_storer.py`: Tests data storage functions in BigQuery.
+- `test_document_ingestor.py`: Tests the PDF ingestion functionality.
+- `test_information_extractor.py`: Tests the extraction of structured information using language models.
+- `test_text_processing_flow.py`: Tests the complete data processing workflow.
+
+To run the tests, you can use the following command:
+```bash
+python -m unittest discover tests
+```
 
 ## Customization
 
