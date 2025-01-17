@@ -8,7 +8,6 @@ This project facilitates the extraction and analysis of structured data from sci
 ```
 research_paper_analysis/
 │
-├── .venv/
 ├── src/
 │   ├── __init__.py
 │   ├── create_env.py
