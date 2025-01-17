@@ -1,0 +1,6 @@
+configparser==7.1.0
+google-cloud-bigquery==3.28.0
+langchain==0.3.14
+langchain_community==0.3.14
+langgraph==0.2.62
+PyMuPDF==1.25.1
